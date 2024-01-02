@@ -11,6 +11,9 @@ const app=express();
 require("dotenv").config();
 const port=process.env.port;
 
+app.get("/",(req,res)=>{
+    res.send("home page");
+})
 
 app.use(express.json());
 app.use("/users",userrouter);
@@ -19,9 +22,7 @@ app.use("/todo",todorouter);
 
 
 
-app.get("/",(req,res)=>{
-    res.send("home page");
-})
+
 
 
 

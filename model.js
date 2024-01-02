@@ -7,3 +7,5 @@ const Todomodel=mongoose.model("todo",todoschema);
 module.exports={
     Todomodel
 }
+
+// todo model

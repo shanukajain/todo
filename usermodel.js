@@ -9,3 +9,4 @@ const Usermodel=mongo.model("user",UserSchema);
 module.exports={
     Usermodel
 }
+// model for user

@@ -7,7 +7,6 @@ try {
     let token=req.headers.authorization;
     var decoded = jwt.verify(token, key);
     if(decoded){
-        // console.log(decoded);
         req.body.userID=decoded.userId;
         next();
     }else {

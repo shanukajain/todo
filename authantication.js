@@ -1,7 +1,7 @@
 const jwt=require("jsonwebtoken");
 require("dotenv").config();
 const key=process.env.key;
-
+// authanticate the user by token
 const authantication=(req,res,next)=>{
 try {
     let token=req.headers.authorization;

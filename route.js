@@ -4,10 +4,17 @@ const { Todomodel } = require("./model");
 const todorouter=express.Router();
 app.use(express.json());
 
+// todo model curd opreations
+
+
 todorouter.get("/",async(req,res)=>{
     let data=await Todomodel.find();
     res.send(`${data}`);
 })
+
+
+
+
 todorouter.post("/create",async(req,res)=>{
    try {
     const data=req.body;
@@ -37,6 +44,9 @@ todorouter.patch("/edit/:todoid",async(req,res)=>{
     res.send("done");
 })
 
+
+
+
 todorouter.delete("/delete/:todoid",async(req,res)=>{
     try {
         const id=req.params.todoid;
@@ -47,6 +57,9 @@ todorouter.delete("/delete/:todoid",async(req,res)=>{
     
     res.send("done");
 })
+
+
+
 
 module.exports={
     todorouter

@@ -27,12 +27,12 @@ Before you begin, ensure you have met the following requirements:
 2. ## Install Dependencies
 
 Make sure you have Node.js and npm installed before proceeding. Then, install the project dependencies using the following command:
-
-   ```bash
+```bash
    cd todo-backend
    npm install
-
-Set up Environment Variables
+```
+   
+3. ## Set up Environment Variables
 
 Create a `.env` file in the root directory and add the following environment variables:
 
@@ -40,9 +40,11 @@ Create a `.env` file in the root directory and add the following environment var
 PORT=3000
 MONGODB_URI=enter-your-url
 SECRET_KEY=your-secret-key
-
- Start the Server
+```
+4. ## Start the Server
 
 To start the server:
+   ```bash
+   npm start
+```
 
-   npm start 

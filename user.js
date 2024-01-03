@@ -2,7 +2,7 @@ const express=require("express");
 const userrouter=express.Router();
 const bcrypt=require("bcrypt");
 var jwt = require('jsonwebtoken');
-const { Usermodel } = require("./usermodel");
+const { UserModel } = require("./usermodel");
 userrouter.use(express.json());
 require("dotenv").config();
 let key=process.env.key
@@ -11,19 +11,22 @@ try {
     let payload=req.body;
     bcrypt.hash(payload.password, 5,async function(err, hash) {
         payload.password=hash;
-       let data=new Usermodel(payload);
+       let data=new UserModel(payload);
        await data.save(); 
     });
-    let data=await Usermodel.find();
-    res.send(data);
+    let data=await UserModel.find();
+    res.status(200).send({ error : false, data:payload });
 } catch (error) {
-    console.log(error);
+    res.status(400).send({ error: true, message: error.message });
 }
 })
+
+
+//user login 
 userrouter.post("/login",async(req,res)=>{
  try {
     let {email,password}=req.body;
-    let data=await Usermodel.findOne({"email":email});
+    let data=await UserModel.findOne({"email":email});
     bcrypt.compare(password, data.password).then(function(result) {
     if(result){
 var token = jwt.sign({ userId:data._id }, key);

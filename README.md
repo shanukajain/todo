@@ -53,7 +53,7 @@ To start the server:
 
 #### Register a new user
 
-- **POST /api/register**
+- **POST /users/register**
 
   Register a new user.
 
@@ -67,7 +67,7 @@ To start the server:
     password:enter-password
   }
    ```
-  - **POST /api/login**
+  - **POST /users/login**
 
   Register a new user.
 
@@ -83,4 +83,34 @@ To start the server:
 {
   "token": "your-generated-jwt-token"
 }
+```
+
+# Todo Backend with User Login Authentication
+
+## Todo Management Endpoints
+
+Include the JWT token in the `Authorization` header for the following endpoints.
+
+### Get all todos
+
+- **GET /todo**
+
+### Create a new todo
+
+- **POST /todo/create**
+
+  ```json
+  {
+    "title": "Todo Title",
+    "description": "Todo Description"
+  }
+  ```
+- **PATCH /todo/edit/:id**
+
+  ```json
+  {
+    "title": "Todo Title",
+    "description": "Todo Description"
+  }
+- **DELETE /todo/delete/:id**
 

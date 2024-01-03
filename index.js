@@ -1,5 +1,6 @@
 const express=require("express");
 const { connection } = require("./config");
+const cors=require("cors");
 const mongoose=require("mongoose");
 const { todorouter } = require("./route");
 const { userrouter } = require("./user");
@@ -15,6 +16,7 @@ app.get("/",(req,res)=>{
     res.send("home page");
 })
 
+app.use(cors())
 app.use(express.json());
 app.use("/users",userrouter);
 app.use(authantication);

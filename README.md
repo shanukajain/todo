@@ -101,16 +101,11 @@ Include the JWT token in the `Authorization` header for the following endpoints.
 
   ```json
   {
-    "title": "Todo Title",
-    "description": "Todo Description"
+    "Task_name": "Todo Title",
+    "complete": "true/false"
   }
   ```
 - **PATCH /todo/edit/:id**
 
-  ```json
-  {
-    "title": "Todo Title",
-    "description": "Todo Description"
-  }
 - **DELETE /todo/delete/:id**
 

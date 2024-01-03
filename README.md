@@ -61,10 +61,10 @@ To start the server:
 
   ```json
   {
-    "name":enter-your-name,
-    email:enter-email,
-    gender:enter-your-gender,
-    password:enter-password
+    "name":"enter-your-name",
+    email:"enter-email",
+    gender:"enter-your-gender",
+    password:"enter-password"
   }
    ```
   - **POST /users/login**

@@ -24,27 +24,25 @@ Before you begin, ensure you have met the following requirements:
    ```bash
    git clone https://github.com/shanukajain/todo.git
 
-## Install Dependencies
+2. ## Install Dependencies
 
 Make sure you have Node.js and npm installed before proceeding. Then, install the project dependencies using the following command:
 
-```bash
-cd todo-backend
-npm install
+   ```bash
+   cd todo-backend
+   npm install
 
-  Set up Environment Variables
+Set up Environment Variables
 
 Create a `.env` file in the root directory and add the following environment variables:
 
 ```env
 PORT=3000
-MONGODB_URI=mongodb://localhost:27017/todo_db
+MONGODB_URI=enter-your-url
 SECRET_KEY=your-secret-key
 
  Start the Server
 
 To start the server:
 
-   npm start
-
-
+   npm start 

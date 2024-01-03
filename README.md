@@ -67,7 +67,7 @@ To start the server:
     "password":"enter-password"
   }
    ```
-  - **POST /users/login**
+- **POST /users/login**
 
   Register a new user.
 

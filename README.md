@@ -47,4 +47,40 @@ To start the server:
    ```bash
    npm start
 ```
+## API Endpoints
+
+### User Authentication
+
+#### Register a new user
+
+- **POST /api/register**
+
+  Register a new user.
+
+  **Request:**
+
+  ```json
+  {
+    "name":enter-your-name,
+    email:enter-email,
+    gender:enter-your-gender,
+    password:enter-password
+  }
+   ```
+  - **POST /api/login**
+
+  Register a new user.
+
+  **Request:**
+
+  ```json
+  {
+    "email": "your-username",
+    "password": "your-password"
+  }
+ **Response:**
+ ```json
+{
+  "token": "your-generated-jwt-token"
+}
 

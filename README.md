@@ -6,7 +6,7 @@ This repository contains a simple Todo backend application with user login authe
 ## Features
 
 - **Todo Management:** Create, read, update, and delete todos.
-- **User Authentication:** Secure user registration and login using Passport.js.
+- **User Authentication:** Secure user registration and login.
 - **Token-based Authentication:** JWT (JSON Web Tokens) are used for token-based authentication.
 
 ## Prerequisites

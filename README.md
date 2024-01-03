@@ -62,9 +62,9 @@ To start the server:
   ```json
   {
     "name":"enter-your-name",
-    email:"enter-email",
-    gender:"enter-your-gender",
-    password:"enter-password"
+    "email":"enter-email",
+    "gender":"enter-your-gender",
+    "password":"enter-password"
   }
    ```
   - **POST /users/login**
